@@ -52,7 +52,7 @@ mv /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat && \
 rm /tmp/tomcat.tgz && \
 rm -rf /opt/tomcat/webapps/examples && \
 rm -rf /opt/tomcat/webapps/docs && \
-rm -rf /opt/tomcat/webapps/ROOT \
+rm -rf /opt/tomcat/webapps/ROOT && \
 cp /usr/lib/jvm/java-8-oracle/lib/tool.jar /opt/tomcat/lib/
 
 # Add admin/admin user
