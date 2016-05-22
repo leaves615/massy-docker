@@ -1,23 +1,6 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @leaves615
- Watch 3
-  Star 5
- Fork 10 cmoro-deusto/docker-tomcat8
- Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy path
-docker-tomcat8/Dockerfile
-ada7128  on 26 Mar
-@cmoro-avg cmoro-avg Upgrade JDK and Tomcat versions
-3 contributors @cmoro-avg @cmoro-deusto @xcmoro
-RawBlameHistory     53 lines (40 sloc)  1.4 KB
 FROM ubuntu:14.04
 
-MAINTAINER Carlos Moro <cmoro@deusto.es>
+MAINTAINER leaves chen<leaves615@gmail.com>
 
 ENV TOMCAT_VERSION 8.0.33
 
@@ -52,7 +35,7 @@ mv /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat && \
 rm /tmp/tomcat.tgz && \
 rm -rf /opt/tomcat/webapps/examples && \
 rm -rf /opt/tomcat/webapps/docs && \
-rm -rf /opt/tomcat/webapps/ROOT && \
+rm -rf /opt/tomcat/webapps/ROOT \
 cp /usr/lib/jvm/java-8-oracle/lib/tool.jar /opt/tomcat/lib/
 
 # Add admin/admin user
