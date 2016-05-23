@@ -37,7 +37,7 @@ rm -rf /opt/tomcat/webapps/examples && \
 rm -rf /opt/tomcat/webapps/docs && \
 rm -rf /opt/tomcat/webapps/ROOT 
 
-RUN cp /usr/lib/jvm/java-8-oracle/lib/tool.jar /opt/tomcat/lib/tool.jar
+RUN cp /usr/lib/jvm/java-8-oracle/lib/tools.jar /opt/tomcat/lib/tools.jar
 
 # Add admin/admin user
 #ADD tomcat-users.xml /opt/tomcat/conf/
