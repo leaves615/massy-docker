@@ -37,7 +37,8 @@ rm -rf /opt/tomcat/webapps/examples && \
 rm -rf /opt/tomcat/webapps/docs && \
 rm -rf /opt/tomcat/webapps/ROOT 
 
-RUN cp /usr/lib/jvm/java-8-oracle/lib/tools.jar /opt/tomcat/lib/tools.jar
+RUN cp /usr/lib/jvm/java-8-oracle/lib/tools.jar /opt/tomcat/lib/tools.jar && \
+sed '1a\JAVA_HOME=/usr/lib/jvm/java-8-oracle' /opt/tomcat/bin/catalina.sh > /opt/tomcat/bin/catalina.sh
 
 # Add admin/admin user
 #ADD tomcat-users.xml /opt/tomcat/conf/
