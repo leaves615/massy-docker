@@ -23,7 +23,8 @@ add-apt-repository -y ppa:webupd8team/java && \
 apt-get update && \
 apt-get install -y oracle-java8-installer wget unzip tar && \
 rm -rf /var/lib/apt/lists/* && \
-rm -rf /var/cache/oracle-jdk8-installer
+rm -rf /var/cache/oracle-jdk8-installer && \
+apt-get clean all
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
