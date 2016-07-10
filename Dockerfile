@@ -40,6 +40,7 @@ rm -rf /opt/tomcat/webapps/ROOT
 
 RUN cp /usr/lib/jvm/java-8-oracle/lib/tools.jar /opt/tomcat/lib/tools.jar && \
 sed -i '/1/a\JAVA_HOME=/usr/lib/jvm/java-8-oracle' /opt/tomcat/bin/catalina.sh
+sed -i '/2/a\JAVA_OPTS=-Xmx150m' /opt/tomcat/bin/catalina.sh
 
 # Add admin/admin user
 #ADD tomcat-users.xml /opt/tomcat/conf/
